@@ -35,7 +35,7 @@ const OrderShow = ({ order, currentUser }) => {
         Time left to pay: {timeLeft}
         <StripeCheckout
           token={({ id }) => doRequest({ token: id })} 
-          stripeKey={process.env.NEXT_PUBLIC_STIPE_PUBKEY}
+          stripeKey='pk_test_51Ic40JCRRfo3JPR8nf43EgabToBrzJIunmjgVn3NBwRqoq3CaLi5jtUvdsl1o28QmfGq9zuldnBpVlFAGEm4nfL500lc55BZMa'
           amount={order.ticket.price * 100}
           email={currentUser.email}
         />
